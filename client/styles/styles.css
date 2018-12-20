@@ -1,0 +1,23 @@
+body {
+  color: #ffffee;
+}
+.strikethrough {
+  text-decoration: line-through;
+  color: slategray;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.padding-bottom {
+  padding-bottom: 15px !important;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+.margin-top {
+  margin-top: 15px;
+}
