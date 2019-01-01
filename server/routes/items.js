@@ -19,7 +19,7 @@ const itemsRoute = (app) => {
       GroceryItem.deleteOne({
         _id: req.params.id
       }, (err) => {
-        res.send();
+        res.send(true);
       });
     })
     .patch((req, res) => {
@@ -29,9 +29,8 @@ const itemsRoute = (app) => {
         for (var key in req.body) {
           doc[key] = req.body[key];
         }
-
         doc.save();
-        res.status(200).send();
+        res.status(200).send(doc);
       })
     });
 }

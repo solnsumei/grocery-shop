@@ -8,7 +8,7 @@ const GLOBALS = {
 
 module.exports = {
   devtool: 'source-map',
-  entry: './client/index',
+  entry: './client/src/index',
   target: 'web',
   output: {
     path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
@@ -30,10 +30,11 @@ module.exports = {
     rules: [
     { test: /\.jsx?/,
       exclude: /node_modules/,
-      include: path.join(__dirname, 'client'),
+      include: path.join(__dirname, 'client/src'),
       loaders: ['babel-loader'] },
     {
-      test: /(\.css)$/, use: ExtractTextPlugin.extract({
+      test: /(\.css)$/,
+      use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
           {

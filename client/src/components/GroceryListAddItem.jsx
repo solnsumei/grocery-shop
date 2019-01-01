@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/groceryItemActions'
 
-class GroceryAddListItem extends React.Component {
+export class GroceryAddListItem extends React.Component {
   state = {
     inputName: '',
     error: ''
