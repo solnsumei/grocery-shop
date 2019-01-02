@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import configureStore from './store/configureStore';
-import '../node_modules/bootswatch/dist/darkly/bootstrap.min.css';
+import '../../node_modules/bootswatch/dist/darkly/bootstrap.min.css';
 import './styles/styles.css';
 import GroceryItemList from './components/GroceryItemList';
 import { loadItems } from './actions/groceryItemActions';

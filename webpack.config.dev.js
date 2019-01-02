@@ -6,7 +6,7 @@ export default {
   mode: 'development',
   entry: [
     //note that it reloads the page if hot module reloading fails.
-    path.resolve(__dirname, 'client/index')
+    path.resolve(__dirname, 'client/src/index')
   ],
   target: 'web',
   output: {
@@ -15,7 +15,7 @@ export default {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'client')
+    contentBase: path.resolve(__dirname, 'client/src')
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -23,7 +23,7 @@ export default {
   ],
   module: {
     rules: [
-      { test: /\.jsx?/, include: path.join(__dirname, 'client'), loaders: ['babel-loader'] },
+      { test: /\.jsx?/, include: path.join(__dirname, 'client/src'), loaders: ['babel-loader'] },
       { test: /(\.css)$/, loaders: ['style-loader', 'css-loader'] },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
       { test: /\.(woff|woff2)$/, loader: 'url-loader?prefix=font/&limit=5000' },

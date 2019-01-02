@@ -6,7 +6,7 @@ import GroceryAddListItem from './GroceryListAddItem';
 
 
 
-class GroceryItemList extends React.Component {
+export class GroceryItemList extends React.Component {
 
   handleDelete = item =>
     this.props.deleteGroceryItem(item);

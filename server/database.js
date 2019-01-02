@@ -1,7 +1,10 @@
 import mongoose from 'mongoose';
+import dbConfig from './config';
 import GroceryItem from './models/GroceryItem';
 
-const databaseURL = process.env.DATABASE_URL || 'mongodb://localhost/grocery-db';
+const env = process.env.NODE_ENV || 'development';
+
+const databaseURL = process.env.DATABASE_URL || dbConfig[env].dbUrl;
 
 mongoose.connect(databaseURL, { useNewUrlParser: true }, () => {
  mongoose.connection.db.dropDatabase();
